@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome <%= userName %></h1>
+
+    <form action="register" method="post">
+        <div>
+        <div style="float: left;">
+        <table>
+            <tr>
+                <td>タイトル</td>
+                <td><input type="text" name="title" /></td>
+            </tr>
+            <tr>
+                <td>内容</td>
+                <td><input type="text" name="desc" /></td>
+            </tr>
+        </table>
+        </div>
+        <div style="float: left;"><input type="submit" name="register" value="追加"/></div>
+        </div>
+    </form>
+
+    <div style="clear: left;">
+    <h2>Todo List</h2>
+    <ul>
+        <% if ( data != null && data.length > 0 ) {
+            for(var i=0; i < data.length; i++ ){ %>
+        <li><%= data[i].title %> &gt; <%= data[i].desc %>
+            <a href="delete/<%= i %>">削除</a></dd>
+        </li>
+        <% }
+        } else { %>
+        <li>予定なし</li>
+        <% } %>
+    </ul>
+    </div>
+  </body>
+</html>
