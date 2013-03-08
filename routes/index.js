@@ -29,7 +29,7 @@ exports.login =  function(req,res){
         req.session.userName = username;
         res.redirect("/home");
     }
-    else res.redirect("");;
+    else res.redirect("/");
 };
 
 exports.logout =  function(req,res){
