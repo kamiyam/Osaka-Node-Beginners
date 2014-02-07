@@ -29,59 +29,59 @@ Via. http://d.hatena.ne.jp/replication/20110726/1311687382
 https://github.com/hokaccha/nodebrew
 
 ```
-	$ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
-	$ cd
-	$ vim .bashrc
+$ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+$ cd
+$ vim .bashrc
 ```
 
 ```
-	export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 ```
 
 ```
-	$ source ~/.bashrc
+$ source ~/.bashrc
 ```
 
 ```
-	$ nodebrew -h
-	nodebrew 0.7.2
+$ nodebrew -h
+nodebrew 0.7.2
 
-	Usage:
-			nodebrew help                         Show this message
-			nodebrew install <version>            Download and install a <version> (compile from source)
-			nodebrew install-binary <version>     Download and install a <version> (binary file)
-			nodebrew uninstall <version>          Uninstall a version
-			nodebrew use <version>                Use <version>
-			nodebrew list                         List installed versions
-			nodebrew ls                           Alias for `list`
-			nodebrew ls-remote                    List remote versions
-			nodebrew ls-all                       List remote and installed versions
-			nodebrew alias <key> <version>        Set alias to version
-			nodebrew unalias <key>                Remove alias
-			nodebrew clean <version> | all        Remove source file
-			nodebrew selfupdate                   Update nodebrew
-			nodebrew migrate-package <version>    Install global NPM packages contained in <version> to current version
-			nodebrew exec <version> -- <command>  Execute <command> specified <version>
+Usage:
+    nodebrew help                         Show this message
+    nodebrew install <version>            Download and install a <version> (compile from source)
+    nodebrew install-binary <version>     Download and install a <version> (binary file)
+    nodebrew uninstall <version>          Uninstall a version
+    nodebrew use <version>                Use <version>
+    nodebrew list                         List installed versions
+    nodebrew ls                           Alias for `list`
+    nodebrew ls-remote                    List remote versions
+    nodebrew ls-all                       List remote and installed versions
+    nodebrew alias <key> <version>        Set alias to version
+    nodebrew unalias <key>                Remove alias
+    nodebrew clean <version> | all        Remove source file
+    nodebrew selfupdate                   Update nodebrew
+    nodebrew migrate-package <version>    Install global NPM packages contained in <version> to current version
+    nodebrew exec <version> -- <command>  Execute <command> specified <version>
 
-	Example:
-			nodebrew install v0.10.22     Install a specific version number
-			nodebrew use v0.10.22         Use a specific version number
+Example:
+    nodebrew install v0.10.22     Install a specific version number
+    nodebrew use v0.10.22         Use a specific version number
 ```
 
 ## Nodeインストール
 
 ```
-	$ nodebrew install v0.10.25
-	$ nodebrew use v0.10.25
+$ nodebrew install v0.10.25
+$ nodebrew use v0.10.25
 
-	$ nodebrew alias default v0.10.25
+$ nodebrew alias default v0.10.25
 
-	$ node -v
-	v0.10.25
+$ node -v
+v0.10.25
 
 
-	$ npm -v
-	1.3.25
+$ npm -v
+1.3.25
 ```
 
 if when node install failed, Install the "Command Line Tools for Xcode"
@@ -94,21 +94,26 @@ $ vim app.js
 ```
 
 ```
-	var http = require('http');
-	http.createServer(function (req, res) {
-	  res.writeHead(200, {'Content-Type': 'text/plain'});
-	  res.end('Hello World\n');
-	}).listen(1337, "127.0.0.1");
-	console.log('Server running at http://127.0.0.1:1337/');
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:1337/');
 ```
 
 ## DB
 
 + MySQL
+
 http://www.mysql.com/
+
 + MongoDB
+
 http://www.mongodb.org/
+
 + Redis
+
 http://redis.io/
 
 ## express
@@ -123,16 +128,18 @@ Node.js フレームワークの一つ
 
 ### expressインストール
 
-	$ npm install -g express
+```
+$ npm install -g express
 
-	$ express --version
-	3.4.8
+$ express --version
+3.4.8
+```
 
 ヘルプ
 ---
 
 ```
-% express -help
+$ express -help
 
   Usage: express [options] [dir]
 
@@ -152,41 +159,41 @@ Node.js フレームワークの一つ
 ---
 
 ```
-	$ express -e -s express_app
+$ express -e -s express_app
 
-		create : express_app
- 		create : express_app/package.json
- 		create : express_app/app.js
-		create : express_app/public
- 		create : express_app/public/images
- 		create : express_app/public/javascripts
- 		create : express_app/routes
- 		create : express_app/routes/index.js
- 		create : express_app/routes/user.js
- 		create : express_app/public/stylesheets
- 		create : express_app/public/stylesheets/style.css
- 		create : express_app/views
- 		create : express_app/views/layout.jade
- 		create : express_app/views/index.jade
+  create : express_app
+  create : express_app/package.json
+  create : express_app/app.js
+  create : express_app/public
+  create : express_app/public/images
+  create : express_app/public/javascripts
+  create : express_app/routes
+  create : express_app/routes/index.js
+  create : express_app/routes/user.js
+  create : express_app/public/stylesheets
+  create : express_app/public/stylesheets/style.css
+  create : express_app/views
+  create : express_app/views/layout.jade
+  create : express_app/views/index.jade
 
- 		install dependencies:
-		  $ cd express_app && npm install
+  install dependencies:
+    $ cd express_app && npm install
 
- 		run the app:
- 		  $ node app
+  run the app:
+    $ node app
 ```
 
 ```
-	$ cd express_app
-	$ npm install
+$ cd express_app
+$ npm install
 
-	(...モジュールダウンロード)
+(...モジュールダウンロード)
 
-	$ npm start
-	> application-name@0.0.1 start /Volumes/D/Copy/work/Osaka-Node-Beginners/express_app
-  > node app.js
+$ npm start
+> application-name@0.0.1 start /Volumes/D/Copy/work/Osaka-Node-Beginners/express_app
+> node app.js
 
-  Express server listening on port 3000
+Express server listening on port 3000
 
 ```
 
@@ -206,7 +213,7 @@ Node.js フレームワークの一つ
 
 #### app.js 解説
 
-	$ vim app.js
+``$ vim app.js``
 
 #### STATIC ファイル
 
@@ -214,45 +221,63 @@ public/フォルダ以下に配置
 
 (例 /public/index.html
 
-	$ vim index.html
+``$ vim index.html``
 
 #### CONFIG
 
 //app.configure(function(){......
 
-	app.use(app.router);
+```
+app.use(app.router);
+```
 
 //routes.....
 
-	app.get('/', routes.index);
+```
+app.get('/', routes.index);
+```
 
 //URL Routing.....
 /routes/index.js
 
+```
 	exports.index = function(req, res){
 	  res.render('index', { title: 'Express', name: "kamiyam" });
 	};
+```
 
 //routes(URL) 変更
 
-	app.get('/index', routes.index);
+```
+app.get('/index', routes.index);
+```
 
 // /views/index.jade
 
+```
 	p Hello #{name}
-
+```
 
 /routes/index.js
 
-	exports.hello = function(req, res){
-	  res.render('hello', { title: 'Express!!!!', name: "kamiyam!!!" });
-	};
+```
+exports.hello = function(req, res){
+  res.render('hello', { title: 'Express!!!!', name: "kamiyam!!!" });
+};
+```
 
 //routes(URL) 追加
 
-	app.get('/hello', routes.hello);
+```
+app.get('/hello', routes.hello);
+```
 
 #### テンプレートエンジン
+
+- (default)
+
+Jade
+: http://jade-lang.com/
 
 - -e, --ejs           add ejs engine support (defaults to jade)
 
@@ -269,61 +294,59 @@ jshtml
 hogan
 : http://twitter.github.com/hogan.js/
 
-- (default)
 
-Jade
-: http://jade-lang.com/
 
 ### EXPRESSサンプル
 
 ```
-	$ cd work
-	$ express expressEjs -s -e
+$ cd work
+$ express expressEjs -s -e
 
-	   create : expressEjs
-	   create : expressEjs/package.json
-	   create : expressEjs/app.js
-	   create : expressEjs/public
-	   create : expressEjs/public/javascripts
-	   create : expressEjs/public/images
-	   create : expressEjs/public/stylesheets
-	   create : expressEjs/public/stylesheets/style.css
-	   create : expressEjs/routes
-	   create : expressEjs/routes/index.js
-	   create : expressEjs/routes/user.js
-	   create : expressEjs/views
-	   create : expressEjs/views/index.ejs
+   create : expressEjs
+   create : expressEjs/package.json
+   create : expressEjs/app.js
+   create : expressEjs/public
+   create : expressEjs/public/javascripts
+   create : expressEjs/public/images
+   create : expressEjs/public/stylesheets
+   create : expressEjs/public/stylesheets/style.css
+   create : expressEjs/routes
+   create : expressEjs/routes/index.js
+   create : expressEjs/routes/user.js
+   create : expressEjs/views
+   create : expressEjs/views/index.ejs
 
-	   install dependencies:
-	     $ cd expressEjs && npm install
+   install dependencies:
+     $ cd expressEjs && npm install
 
-	   run the app:
-	     $ node app
+   run the app:
+     $ node app
 ```
 
 ```
-	$ cd expressEjs
-	$ npm install
-	$ node app
+$ cd expressEjs
+$ npm install
+$ node app
 ```
 
 ## package.jsonについて
 
-``npm install --save オプション``
+``npm install --save`` オプション
 
 ```
-	$ npm install less --save
+$ npm install less --save
 ```
 ```
-	$ npm uninstall less --save
+$ npm uninstall less --save
 ```
 
 ``npm start``
 
 ```
-	$ vim package.json
-	    "start": "PORT=1234 node app"
-	$ npm start
+$ vim package.json
+  "start": "PORT=1234 node app"
+
+$ npm start
 ```
 
 ## env
@@ -331,14 +354,16 @@ Jade
 ``process.env.PORT``
 
 ```
-	$ vim app.js
-	app.set('port', process.env.PORT || 3000);
+$ vim app.js
+app.set('port', process.env.PORT || 3000);
 ```
 
 ## Debug Tool
 
 ``supervisor & nodemon & forever``
 
-	$ npm install -g supervisor
-	$ npm install -g nodemon
-	$ npm install -g forever
+```
+$ npm install -g supervisor
+$ npm install -g nodemon
+$ npm install -g forever
+```
