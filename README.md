@@ -29,7 +29,7 @@ Via. http://d.hatena.ne.jp/replication/20110726/1311687382
 https://github.com/hokaccha/nodebrew
 
 ```
-$ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+$ curl -L git.io/nodebrew | perl - setup
 $ cd
 $ vim .bashrc
 ```
